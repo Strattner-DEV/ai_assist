@@ -1,6 +1,7 @@
 import pyjokes
 from ai import AI
 from todo import Todo, Item
+from weather import Weather
 
 wanda = AI()
 todo = Todo()
