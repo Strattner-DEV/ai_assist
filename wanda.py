@@ -70,7 +70,7 @@ while True and command != "turn off":
         master()
         command = ""
 
-    if command in ["add to-do","add to do", "add item"]:
+    if command in ["add to-do","add to do", "add item", "new item"]:
         add_todo()
         command = ""
 
