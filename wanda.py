@@ -1,5 +1,6 @@
 import pyjokes
 from ai import AI
+from todo import Todo, Item
 
 wanda = AI()
 
