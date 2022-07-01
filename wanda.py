@@ -17,14 +17,14 @@ def master():
 
 def add_todo()->bool:
     item = Item()
-    alf.say("Tell me what to add to the list")
+    wanda.say("Tell me what to add to the list")
 
     item.title = ""
     try:
-        item.title = alf.listen()
+        item.title = wanda.listen()
         todo.new_item(item)
         message = "Added " + item.title
-        alf.say(message)
+        wanda.say(message)
         return True
     except:
         print("oops there was an error")
@@ -32,19 +32,19 @@ def add_todo()->bool:
     
 def list_todos():
     if len(todo) > 0:
-        alf.say("Here are your to do's")
+        wanda.say("Here are your to do's")
         for item in todo:
-            alf.say(item.title)
+            wanda.say(item.title)
     else:
-        alf.say("The to do list is empty!")
+        wanda.say("The to do list is empty!")
     
 def remove_todo()->bool:
-    alf.say("Tell me which item to remove")
+    wanda.say("Tell me which item to remove")
     try:
-        item_title = alf.listen()
+        item_title = wanda.listen()
         todo.remove_item(title=item_title)
         message = "Removed " + item_title
-        alf.say(message)
+        wanda.say(message)
         return True
     except:
         print("opps there was an error")
