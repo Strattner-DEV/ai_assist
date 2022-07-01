@@ -51,7 +51,7 @@ def remove_todo()->bool:
         return False
 
 command = ""
-while True and command != "turn off":
+while True and command not in ["turn off", "goodbye", "thank you"]:
 
     try:
         command = wanda.listen()
@@ -66,7 +66,7 @@ while True and command != "turn off":
         joke()
         command = ""
 
-    if command == ["who is your master", "who created you"]:
+    if command in ["who is your master", "who created you"]:
         master()
         command = ""
 
