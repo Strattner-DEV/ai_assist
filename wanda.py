@@ -14,13 +14,13 @@ def master():
     wanda.say(sentence)
 
 command = ""
-while True and command != "goodbye":
+while True and command != "turn off":
     command = wanda.listen()
     print("Command was:", command)
 
     if command == "tell me a joke":
         joke()
-    if command == "who is your master?"
+    if command == "who is your master":
         master()
 
 wanda.say("Goodbye, I'm going to sleep now")

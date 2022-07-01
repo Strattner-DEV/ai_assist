@@ -6,7 +6,7 @@ class AI():
     __skill = []
 
     def __init__(self, name=None):
-        self.engine = pyttsx3.init()
+        self.engine = pyttsx3.init("espeak")
         self.r = sr.Recognizer()
         self.m = sr.Microphone()
 
@@ -38,16 +38,17 @@ class AI():
             audio = self.r.listen(source)
         print("Gotcha!")
 
+        phrase = ""
+
         try:
             phrase = self.r.recognize_google(audio, show_all=False, language="en_US")
-            sentence "Got it, you said" + phrase
+            sentence = "Got it, you said" + phrase
             self.engine.say(sentence)
             self.engine.runAndWait()
-        except e as error:
-            print("Sorry, didn't catch that: ", e)
+        except Exception as error:
+            print("Sorry, didn't catch that: ", error)
             self.engine.say("Sorry, didn't catch that")
             self.engine.runAndWait()
 
         print("You Said", phrase)
         return phrase
-    
