@@ -8,6 +8,11 @@ def joke():
     print(funny)
     wanda.say(funny)
 
+def master():
+    sentence = "The great master Bruno!"
+    print(sentence)
+    wanda.say(sentence)
+
 command = ""
 while True and command != "goodbye":
     command = wanda.listen()
@@ -15,5 +20,7 @@ while True and command != "goodbye":
 
     if command == "tell me a joke":
         joke()
+    if command == "who is your master?"
+        master()
 
 wanda.say("Goodbye, I'm going to sleep now")
