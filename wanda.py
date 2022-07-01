@@ -74,7 +74,7 @@ while True and command != "turn off":
         add_todo()
         command = ""
 
-    if command in ["list todos", "list todo", "list to do", "list to-do", "list to do's",'list items']:
+    if command in ["list todos", "list todo", "list to do", "list to-do", "list to do's",'list items', "shown to do", "shown to-do", "shown todo"]:
         list_todos()
         command = ""
 
