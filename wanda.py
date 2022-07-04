@@ -104,7 +104,7 @@ while True and command not in ["turn off", "goodbye", "thank you"]:
     if command in ['tell me a fact','tell me something', "tell me more"]:
         facts()
     
-     if command in ['good morning','good evening','good night','good afternoon']:
+    if command in ['good morning','good evening','good night','good afternoon']:
         now = datetime.now()
         hr = now.hour
         if hr <= 0 <=12:
