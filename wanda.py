@@ -107,6 +107,7 @@ while True and command not in ["turn off", "goodbye", "thank you"]:
     if command in ['good morning','good evening','good night','good afternoon']:
         now = datetime.now()
         hr = now.hour
+        message = ""
         if hr <= 0 <=12:
             message = "Morning"
         if hr >=12 <= 17:
