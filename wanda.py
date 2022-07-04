@@ -116,7 +116,7 @@ while True and command not in ["turn off", "goodbye", "thank you"]:
             message = "Evening"
         if hr > 21: message = "Night"
 
-        message = "Good " + message + " Bruno"
-        wanda.say(message)
+        greetings = "Good " + message + " Bruno"
+        wanda.say(greetings)
 
 wanda.say("Goodbye, I'm going to sleep now")
