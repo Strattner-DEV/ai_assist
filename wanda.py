@@ -98,8 +98,8 @@ while True and command not in ["turn off", "goodbye", "thank you"]:
     if command in ['what is the weather like', 'give me the forecast',"what's the weather"]:
         weather()
         command = ""
-        
-    if command in ['tell me a fact','tell me something']:
+
+    if command in ['tell me a fact','tell me something', "tell me more"]:
         facts()
 
 wanda.say("Goodbye, I'm going to sleep now")
