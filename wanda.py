@@ -3,7 +3,7 @@ from ai import AI
 from todo import Todo, Item
 from weather import Weather
 from randfacts import randfacts
-from datetime import datetime
+# from datetime import datetime
 
 wanda = AI()
 todo = Todo()
@@ -104,19 +104,19 @@ while True and command not in ["turn off", "goodbye", "thank you"]:
     if command in ['tell me a fact','tell me something', "tell me more"]:
         facts()
     
-    if command in ['good morning','good evening','good night','good afternoon']:
-        now = datetime.now()
-        hr = now.hour
-        message = ""
-        if hr <= 0 <=12:
-            message = "Morning"
-        if hr >=12 <= 17:
-            message = "Afternoon"
-        if hr >=17 <=21:
-            message = "Evening"
-        if hr > 21: message = "Night"
+    # if command in ['good morning','good evening','good night','good afternoon']:
+    #     now = datetime.now()
+    #     hr = now.hour
+    #     message = ""
+    #     if hr <= 0 <=12:
+    #         message = "Morning"
+    #     if hr >=12 <= 17:
+    #         message = "Afternoon"
+    #     if hr >=17 <=21:
+    #         message = "Evening"
+    #     if hr > 21: message = "Night"
 
-        greetings = "Good " + message + " Bruno"
-        wanda.say(greetings)
+    #     greetings = "Good " + message + " Bruno"
+    #     wanda.say(greetings)
 
 wanda.say("Goodbye, I'm going to sleep now")
