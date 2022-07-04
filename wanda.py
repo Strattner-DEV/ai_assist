@@ -51,6 +51,12 @@ def remove_todo()->bool:
         print("opps there was an error")
         return False
 
+def weather():
+    myweather = Weather()
+    forecast = myweather.forecast
+    print(forecast)
+    wanda.say(forecast)
+
 command = ""
 while True and command not in ["turn off", "goodbye", "thank you"]:
 
@@ -81,5 +87,9 @@ while True and command not in ["turn off", "goodbye", "thank you"]:
 
     if command in ["remove todo", "remove item", "mark done", "remove todos", "remove to-do", "remove to do's"]:
         remove_todo()
+
+    if command in ['what is the weather like', 'give me the forecast',"what's the weather"]:
+        weather()
+        command = ""
 
 wanda.say("Goodbye, I'm going to sleep now")
