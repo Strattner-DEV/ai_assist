@@ -87,8 +87,8 @@ def task():
         pass
 
 command = ""
-wanda.say("hello")
-while True and command not in ["turn off", "goodbye", "thank you", "Morra"]:
+wanda.say("Olá! Como posso te ajudar?")
+while True and command not in ["turn off", "goodbye", "thank you", "morra", "adeus"]:
 
     try:
         command = wanda.listen()
@@ -146,4 +146,4 @@ while True and command not in ["turn off", "goodbye", "thank you", "Morra"]:
     #     greetings = "Good " + message + " Bruno"
     #     wanda.say(greetings)
 
-wanda.say("Goodbye, I'm going to sleep now")
+wanda.say("Adeus, estou indo descansar")

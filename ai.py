@@ -42,12 +42,12 @@ class AI():
 
         try:
             phrase = self.r.recognize_google(audio, show_all=False, language="pt_BR")
-            sentence = "Got it, you said" + phrase
+            sentence = "Entendi, você falou" + phrase
             self.engine.say(sentence)
             self.engine.runAndWait()
         except Exception as error:
-            print("Sorry, didn't catch that: ", error)
-            self.engine.say("Sorry, didn't catch that")
+            print("Desculpe, não entendi: ", error)
+            self.engine.say("Desculpe, não entendi:")
             self.engine.runAndWait()
 
         print("You Said", phrase)
