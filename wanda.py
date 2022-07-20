@@ -86,6 +86,59 @@ def task():
         print("opps there was an error")
         pass
 
+def sede():
+    id_number = random.randint(0, 99999999999)
+    content = "Necessiade de Agua"
+    priority = 0
+    try:    
+        url = f"http://192.168.232.183:8000/add_task?id_number={id_number}&content={content}&priority={priority}"
+        resp = requests.post(url, headers=headers)
+        print(resp)
+        wanda.say("A Equipe foi informada!")
+    except:
+        print("opps there was an error")
+        pass
+
+def dor():
+    id_number = random.randint(0, 99999999999)
+    content = "Necessiade de Apoio"
+    priority = 1
+    try:    
+        url = f"http://192.168.232.183:8000/add_task?id_number={id_number}&content={content}&priority={priority}"
+        resp = requests.post(url, headers=headers)
+        print(resp)
+        wanda.say("A Equipe foi informada!")
+    except:
+        print("opps there was an error")
+        pass
+
+def fome():
+    id_number = random.randint(0, 99999999999)
+    content = "Necessiade de Comida"
+    priority = 0
+    try:    
+        url = f"http://192.168.232.183:8000/add_task?id_number={id_number}&content={content}&priority={priority}"
+        resp = requests.post(url, headers=headers)
+        print(resp)
+        wanda.say("A Equipe foi informada!")
+    except:
+        print("opps there was an error")
+        pass
+
+def banheiro():
+    id_number = random.randint(0, 99999999999)
+    content = "Necessiade de Banheiro"
+    priority = 1
+    try:    
+        url = f"http://192.168.232.183:8000/add_task?id_number={id_number}&content={content}&priority={priority}"
+        resp = requests.post(url, headers=headers)
+        print(resp)
+        wanda.say("A Equipe foi informada!")
+    except:
+        print("opps there was an error")
+        pass
+
+
 command = ""
 wanda.say("Olá! Como posso te ajudar?")
 while True and command not in ["turn off", "goodbye", "thank you", "morra", "adeus"]:
@@ -129,6 +182,22 @@ while True and command not in ["turn off", "goodbye", "thank you", "morra", "ade
 
     if command in  ['tarefa']:
         task()
+        command = ""
+    
+    if command in ['estou com sede', 'quero aquua', 'presciso de água', 'água']:
+        sede()
+        command = ""
+
+    if command in ['estou com dor', 'sinto dor', 'presciso de ajuda', 'ajuda']:
+        dor()
+        command = ""
+    
+    if command in ['estou com fome', 'sinto fome', 'presciso de comida']:
+        fome()
+        command = ""
+
+    if command in ['presciso ir ao banheiro', 'quero ir ao banheiro']:
+        banheiro()
         command = ""
     
     # if command in ['good morning','good evening','good night','good afternoon']:
