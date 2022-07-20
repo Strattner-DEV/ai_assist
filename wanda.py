@@ -127,7 +127,7 @@ while True and command not in ["turn off", "goodbye", "thank you"]:
         facts()
         command = ""
 
-    if command in  ['add task', 'task']:
+    if command in  ['tarefa']:
         task()
         command = ""
     

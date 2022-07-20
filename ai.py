@@ -41,7 +41,7 @@ class AI():
         phrase = ""
 
         try:
-            phrase = self.r.recognize_google(audio, show_all=False, language="en_US")
+            phrase = self.r.recognize_google(audio, show_all=False, language="pt_BR")
             sentence = "Got it, you said" + phrase
             self.engine.say(sentence)
             self.engine.runAndWait()
