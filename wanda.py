@@ -88,7 +88,7 @@ def task():
 
 command = ""
 wanda.say("hello")
-while True and command not in ["turn off", "goodbye", "thank you"]:
+while True and command not in ["turn off", "goodbye", "thank you", "Morra"]:
 
     try:
         command = wanda.listen()
