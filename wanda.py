@@ -127,7 +127,7 @@ while True and command not in ["turn off", "goodbye", "thank you"]:
         facts()
         command = ""
 
-    if command in  ['test script']:
+    if command in  ['test']:
         task()
         command = ""
     
