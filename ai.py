@@ -7,6 +7,7 @@ class AI():
 
     def __init__(self, name=None):
         self.engine = pyttsx3.init("espeak")
+        self.engine.setProperty("voice", "brazil")
         self.r = sr.Recognizer()
         self.m = sr.Microphone()
 
