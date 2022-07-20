@@ -4,6 +4,16 @@ from todo import Todo, Item
 from weather import Weather
 from randfacts import randfacts
 # from datetime import datetime
+import requests
+import random
+from requests.structures import CaseInsensitiveDict
+
+headers = CaseInsensitiveDict()
+
+
+headers["Authorization"] = "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzUsInVzZXJuYW1lIjoidGVzdDciLCJwYXNzd29yZCI6IiQyYiQxMiQ3SkovVnBMSGFUVjJqN1FwbHJsRkouV2JFY2tlUFRycjZYLkVFV3k5QTVyMXNFazZpMFRxYSIsImJvYXJkIjp7InRhc2tzIjp7fSwiY29sdW1ucyI6eyJjb2x1bW4tMSI6eyJpZCI6ImNvbHVtbi0xIiwidGl0bGUiOiJUbyBkbyIsInRhc2tJZHMiOltdfSwiY29sdW1uLTIiOnsiaWQiOiJjb2x1bW4tMiIsInRpdGxlIjoiRG9uZSIsInRhc2tJZHMiOltdfSwiY29sdW1uLTMiOnsiaWQiOiJjb2x1bW4tMyIsInRpdGxlIjoiSW4gcHJvZ3Jlc3MiLCJ0YXNrSWRzIjpbXX19LCJjb2x1bW5PcmRlciI6WyJjb2x1bW4tMSIsImNvbHVtbi0yIiwiY29sdW1uLTMiXX19.9AY6cLIggbldwuiSLAZj_1RY8TiuCNCjZKZ1Lp_fwR8"
+headers["Content-Type"] = "application/json"
+headers["Content-Length"] = "0"
 
 wanda = AI()
 todo = Todo()
@@ -64,6 +74,18 @@ def weather():
     print(forecast)
     wanda.say(forecast)
 
+def task():
+    id_number = random.randint(0, 99999999999)
+    content = "Test Wanda"
+    priority = 1
+    try:    
+        url = f"http://192.168.232.183:8000/add_task?id_number={id_number}&content={content}&priority={priority}"
+        resp = requests.post(url, headers=headers)
+        print(resp)
+    except:
+        print("opps there was an error")
+        pass
+
 command = ""
 wanda.say("hello")
 while True and command not in ["turn off", "goodbye", "thank you"]:
@@ -103,6 +125,11 @@ while True and command not in ["turn off", "goodbye", "thank you"]:
 
     if command in ['tell me a fact','tell me something', "tell me more"]:
         facts()
+        command = ""
+
+    if command in  ['test script']:
+        task()
+        command = ""
     
     # if command in ['good morning','good evening','good night','good afternoon']:
     #     now = datetime.now()
