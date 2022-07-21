@@ -176,7 +176,7 @@ while True and command not in ["turn off", "goodbye", "thank you", "morra", "ade
         weather()
         command = ""
 
-    if command in ['tell me a fact','tell me something', "tell me more"]:
+    if command in ['tell me a fact','tell me something', "tell me more", 'conte um fato']:
         facts()
         command = ""
 
